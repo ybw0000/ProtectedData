@@ -7,115 +7,140 @@
 
 .first {
   width: 100%;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #f4f4f5;
   background-image: url("../img/background_header.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 2% 12%;
+  font-family: 'Lato', sans-serif;
+  padding: 4% 10%;
 }
 
-.first__header {
-  width: 100%;
-  height: 7%;
-  font-family: 'Lato', sans-serif;
+.first__left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.first__header a {
-  font-size: 14px;
+.first__left a {
+  font-size: 15px;
   font-weight: bold;
   color: #26272d;
   text-decoration: none;
+  margin-left: 35px;
 }
 
-.first__header a:hover {
+.first__left a:hover {
   opacity: 0.4;
   color: #1b1c1e;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-.first__header_left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
+.first__center a {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  color: #26272d;
+  text-decoration: none;
 }
 
-.first__header_left a {
-  margin-left: 20%;
+.first__center a:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
-.first__header_right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 21%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.first__header .logo {
-  margin-left: 9%;
-}
-
-.first__header .logo_black {
+.first__center_logo {
   font-weight: bold;
-  font-size: 14px;
 }
 
-.first__header_get-app {
+.first__right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 110px;
-  height: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: -1%;
+}
+
+.first__right a {
+  font-size: 15px;
+  font-weight: bold;
+  color: #26272d;
+  text-decoration: none;
+  margin-right: 35px;
+}
+
+.first__right a:hover {
+  opacity: 0.4;
+  color: #1b1c1e;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.first__right_button {
+  width: 132px;
+  height: 42px;
   background-color: #267df4;
   border-radius: 21px;
-  padding: 7% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.first__header_get-app:hover {
+.first__right_button:hover {
   background-color: #1b1c1e;
-  -webkit-transition: .6s;
-  transition: .6s;
+  -webkit-transition: .7s;
+  transition: .7s;
 }
 
-.first__header_get-app .link_button {
-  font-size: 12px;
+.first__right_button img {
+  margin-left: 15%;
+}
+
+.first__right_button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   line-height: 1.2;
   font-weight: 400;
   color: #ffffff;
+  margin-right: 0;
 }
 
-.first__header_get-app .link_button:hover {
-  color: #ffffff;
-  -webkit-transition: .6s;
-  transition: .6s;
+.first__right_button a:hover {
   opacity: 1;
+  color: #ffffff;
+  -webkit-transition: .7s;
+  transition: .7s;
 }
 /*# sourceMappingURL=style.css.map */
