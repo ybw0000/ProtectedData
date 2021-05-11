@@ -35,19 +35,22 @@
         }
         &_left {
             display: flex;
-            width: 17%;
             text-align: center;
-            justify-content: space-between;
+            & a {
+                margin-left: 20%;
+            }
         }
         &_right {
             display: flex;
             align-items: center;
-            width: 22%;
+            width: 21%;
             justify-content: space-between;
         }
         .logo {
+            margin-left: 9%;
             &_black {
                 font-weight: bold;
+                font-size: 14px;
             }
         }
         &_get-app {
@@ -63,11 +66,16 @@
                 background-color: #1b1c1e;
                 transition: .6s;
             }
-            & p {
+            .link_button {
                 font-size: 12px;
                 line-height: 1.2;
                 font-weight: 400;
                 color: #ffffff;
+                &:hover {
+                    color: #ffffff;
+                    transition: .6s;
+                    opacity: 1;
+                }
             }
         }
     }
