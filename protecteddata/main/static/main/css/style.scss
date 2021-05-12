@@ -15,7 +15,7 @@
     background-position: center;
     background-size: cover;
     font-family: 'Lato', sans-serif;
-    padding: 4% 10%;
+    padding: 4% 10% 40% 10%;
     &__left {
         display: flex;
         & a {
@@ -47,10 +47,13 @@
             font-weight: bold;
         }
     }
+    &__center {
+        margin-left: 4%;
+    }
     &__right {
+        height: fit-content;
         display: flex;
         align-items: center;
-        height: fit-content;
         margin-top: -1%;
         & a {
             font-size: 15px;
@@ -64,7 +67,12 @@
                 transition: .5s;
             }
         }
-        &_button {
+        #button_top {
+            &:hover {
+                opacity: 1;
+            }
+        }
+        & button {
             width: 132px;
             height: 42px;
             background-color: #267df4;
@@ -72,29 +80,60 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            border: none;
             &:hover {
-                background-color: #1b1c1e;
-                transition: .7s;
+                background-color: #000000;
+                color: #ffffff;
+                transition: .6s;
+                transform: scale(1.15);
             }
-            & img {
-                margin-left: 15%;
-            }
-            & a {
-                display: flex;
-                height: 100%;
-                width: 100%;
-                align-items: center;
+            & span {
                 font-size: 16px;
-                justify-content: center;
-                line-height: 1.2;
                 font-weight: 400;
                 color: #ffffff;
                 margin-right: 0;
-                &:hover {
-                    opacity: 1;
-                    color: #ffffff;
-                    transition: .7s;
-                }
+            }
+        }
+    }
+    & h1 {
+        font-family: 'Varela Round', sans-serif;
+        font-size: 62px;
+        font-weight: 400;
+        color: #26272d;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 10%;
+    }
+    & p {
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 400;
+        color: #8c8f94;
+        text-align: center;
+        margin: 7% 18%;
+        margin-top: 3%;
+    }
+    &__button {
+        text-decoration: none;
+        margin: 0 auto;
+        & button {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 165px;
+            height: 50px;
+            border: 1px solid #26272d;
+            border-radius: 25px;
+            &:hover {
+                transition: .6s;
+                transform: scale(1.15);
+            }
+            & span {
+                font-family: 'Lato', sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+                color: #26272d;
             }
         }
     }
