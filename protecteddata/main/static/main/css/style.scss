@@ -244,3 +244,30 @@
         }
     }
 }
+
+.description {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 13%;
+    &__left {
+        width: 45%;
+        font-family: 'Lato', sans-serif;
+        & h2 {
+            font-size: 26px;
+            font-weight: 400;
+            color: #26272d;
+            margin: 6% 0 0 0;
+        }
+        & p {
+            font-size: 18px;
+            line-height: 1.6;
+            font-weight: 400;
+            color: #8c8f94;
+            margin: 4% 0 0 0;
+        }
+    }
+    &__right {
+        @extend .description__left;
+    }
+}
