@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-.first {
+.menu {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,7 +16,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #f4f4f5;
-  background-image: url("../img/background_header.png");
+  background-image: url("../img/Background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -24,13 +24,13 @@
   padding: 4% 10% 40% 10%;
 }
 
-.first__left {
+.menu__left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.first__left a {
+.menu__left a {
   font-size: 15px;
   font-weight: bold;
   color: #26272d;
@@ -38,14 +38,14 @@
   margin-left: 35px;
 }
 
-.first__left a:hover {
+.menu__left a:hover {
   opacity: 0.4;
   color: #1b1c1e;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-.first__center a {
+.menu__center a {
   display: block;
   font-size: 15px;
   font-weight: 400;
@@ -53,22 +53,22 @@
   text-decoration: none;
 }
 
-.first__center a:hover {
+.menu__center a:hover {
   -webkit-transition: 1s;
   transition: 1s;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
 
-.first__center_logo {
+.menu__center_logo {
   font-weight: bold;
 }
 
-.first__center {
+.menu__center {
   margin-left: 4%;
 }
 
-.first__right {
+.menu__right {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -81,7 +81,7 @@
   margin-top: -1%;
 }
 
-.first__right a {
+.menu__right a {
   font-size: 15px;
   font-weight: bold;
   color: #26272d;
@@ -89,18 +89,18 @@
   margin-right: 35px;
 }
 
-.first__right a:hover {
+.menu__right a:hover {
   opacity: 0.4;
   color: #1b1c1e;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-.first__right #button_top:hover {
+.menu__right #button_top:hover {
   opacity: 1;
 }
 
-.first__right button {
+.menu__right button {
   width: 132px;
   height: 42px;
   background-color: #267df4;
@@ -117,7 +117,7 @@
   border: none;
 }
 
-.first__right button:hover {
+.menu__right button:hover {
   background-color: #000000;
   color: #ffffff;
   -webkit-transition: .6s;
@@ -126,14 +126,14 @@
           transform: scale(1.15);
 }
 
-.first__right button span {
+.menu__right button span {
   font-size: 16px;
   font-weight: 400;
   color: #ffffff;
   margin-right: 0;
 }
 
-.first h1 {
+.menu h1 {
   font-family: 'Varela Round', sans-serif;
   font-size: 62px;
   font-weight: 400;
@@ -143,7 +143,7 @@
   margin-top: 10%;
 }
 
-.first p {
+.menu p {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   line-height: 1.5;
@@ -154,12 +154,12 @@
   margin-top: 3%;
 }
 
-.first__button {
+.menu__button {
   text-decoration: none;
   margin: 0 auto;
 }
 
-.first__button button {
+.menu__button button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,17 +175,176 @@
   border-radius: 25px;
 }
 
-.first__button button:hover {
+.menu__button button:hover {
   -webkit-transition: .6s;
   transition: .6s;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-.first__button button span {
+.menu__button button span {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: bold;
   color: #26272d;
+}
+
+.contact {
+  font-family: 'Varela Round', sans-serif;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 6% 10% 10% 10%;
+}
+
+.contact__text {
+  width: 100%;
+  text-align: center;
+}
+
+.contact__text h2 {
+  font-size: 90px;
+  font-weight: 700;
+  color: #262626;
+  margin-bottom: 2%;
+}
+
+.contact__text p {
+  max-width: 30%;
+  font-size: 17px;
+  font-weight: 300;
+  color: #262626;
+  line-height: 1.4;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+
+.contact__form {
+  width: 40%;
+}
+
+.contact__form form input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 45px;
+  opacity: 0.6;
+  background-color: #00c4c4;
+  margin-bottom: 3%;
+  border: none;
+  padding-left: 5%;
+  color: white;
+}
+
+.contact__form form input::-webkit-input-placeholder {
+  color: white;
+}
+
+.contact__form form input:-ms-input-placeholder {
+  color: white;
+}
+
+.contact__form form input::-ms-input-placeholder {
+  color: white;
+}
+
+.contact__form form input::placeholder {
+  color: white;
+}
+
+.contact__form form input:focus {
+  opacity: 1;
+  border-left: 6px solid #355b82;
+}
+
+.contact__form form textarea {
+  width: 100%;
+  height: 250px;
+  opacity: 0.5;
+  background-color: #00c4c4;
+  border: none;
+  margin-bottom: 3%;
+  color: white;
+  padding-left: 25px;
+  padding-top: 25px;
+}
+
+.contact__form form textarea::-webkit-input-placeholder {
+  color: white;
+}
+
+.contact__form form textarea:-ms-input-placeholder {
+  color: white;
+}
+
+.contact__form form textarea::-ms-input-placeholder {
+  color: white;
+}
+
+.contact__form form textarea::placeholder {
+  color: white;
+}
+
+.contact__form form textarea:focus {
+  opacity: 1;
+  border-left: 6px solid #355b82;
+}
+
+.contact__form form button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  height: 45px;
+  background-color: #00c4c4;
+  margin: 0 auto;
+  color: white;
+  border: none;
+  font-size: 18px;
+}
+
+.contact__form form button:hover {
+  background-color: #0e9c9c;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.contact__data-form {
+  width: 30%;
+  margin-right: 13%;
+}
+
+.contact__data-form h5 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #262626;
+}
+
+.contact__data-form p {
+  color: #262626;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 2%;
 }
 /*# sourceMappingURL=style.css.map */
