@@ -55,14 +55,11 @@
         <div class="contact__form">
             <form action="" method="POST">
                 {% csrf_token %}
-<!--                <input type="name" placeholder="Your name...">-->
-<!--                <input type="email" placeholder="Your email...">-->
-<!--                <input type="phone" placeholder="Your phone...">-->
-<!--                <textarea placeholder="Your message..."></textarea>-->
-                {{ form.name }}
-                {{ form.email }}
-                {{ form.phone }}
-                {{ form.message }}
+                <!--                <input type="name" placeholder="Your name...">-->
+                <!--                <input type="email" placeholder="Your email...">-->
+                <!--                <input type="phone" placeholder="Your phone...">-->
+                <!--                <textarea placeholder="Your message..."></textarea>-->
+                {{ form.name }} {{ form.email }} {{ form.phone }} {{ form.message }}
                 <button type="submit">SEND</button>
             </form>
         </div>
@@ -88,6 +85,28 @@
             <p>This sounded a very good reason, and Alice was quite pleased to know it. 'I never th ed as a scantlin ought of that before!' she said.</p>
             <p>This I have produced as a scantling of Jack’s great eloquence and the force of his reasoning upon ed as a scantlin ed as a scantlin such abstruse matters.</p>
         </div>
+    </section>
+    <img class="line" src="../../static/main/img/line_height.svg" alt="Line_after_desription">
+    <section class="iphone">
+        <img src="../../static/main/img/iPhone_6.png" alt="Iphone-6">
+        <div class="iphone__text">
+            <h2>Your day <br>is protected</h2>
+            <p>There have not been any since we have lived here, said my mother.</p>
+            <p>We thought - Mr. Copperfield thought - it was quite a large rookery; but the nests were very old ones, and the birds have deserted them a long while.</p>
+        </div>
+    </section>
+    <section class="map">
+        <div class="map__text">
+            <h2>We are almost <br> everywhere</h2>
+            <p>Now the races of these two have been for some ages utterly extinct, and besides to discourse any further of them would not be at all to my purpose.</p>
+            <p>Thus much I thought proper to tell you in relation to yourself, and to the trust I reposed in you.</p>
+            <div class="map__text_partners image">
+                <span>partners</span>
+                <img src="../../static/main/img/Dropbox.png" alt="Dropbox">
+                <img class="image__evernote" src="../../static/main/img/Evernote.png" alt="Evernote">
+            </div>
+        </div>
+        <img src="../../static/main/img/world_map.png" alt="World_map">
     </section>
 </body>
 

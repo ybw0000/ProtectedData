@@ -378,4 +378,99 @@
   color: #8c8f94;
   margin: 4% 0 0 0;
 }
+
+.line {
+  display: block;
+  margin: 0 auto;
+}
+
+.iphone {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5% 5% 0 0;
+}
+
+.iphone img {
+  display: block;
+}
+
+.iphone__text {
+  width: 34%;
+  margin: 10% 0 0 5%;
+}
+
+.iphone__text h2 {
+  max-width: 60%;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #26272d;
+  margin-bottom: 11%;
+}
+
+.iphone__text p {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #8c8f94;
+  line-height: 1.5;
+  margin-top: 5%;
+}
+
+.map {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 13% 0 10% 10%;
+}
+
+.map__text {
+  margin: 3% 5% 0 0;
+}
+
+.map__text h2 {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #26272d;
+  margin-bottom: 11%;
+}
+
+.map__text p {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #8c8f94;
+  line-height: 1.5;
+  margin-top: 5%;
+}
+
+.map__text_partners {
+  margin-top: 12%;
+}
+
+.map__text_partners span {
+  width: 100%;
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #26272d;
+  margin-bottom: 6%;
+}
+
+.map__text_partners .image__evernote {
+  margin-left: 8%;
+}
 /*# sourceMappingURL=style.css.map */
