@@ -12,7 +12,7 @@ class ContactForm(forms.ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Name'
             }),
-            "email": forms.TextInput(attrs={
+            "email": forms.EmailInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Email'
             }),
