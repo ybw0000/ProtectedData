@@ -58,12 +58,12 @@
         <div class="contact__form">
             <form action="" method="POST">
                 {% csrf_token %}
-                <!--                <input type="name" placeholder="Your name...">-->
-                <!--                <input type="email" placeholder="Your email...">-->
-                <!--                <input type="phone" placeholder="Your phone...">-->
-                <!--                <textarea placeholder="Your message..."></textarea>-->
-                {{ form.name }} {{ form.email }} {{ form.phone }} {{ form.message }}
-                <button type="submit">SEND</button>
+                <input type="name" placeholder="Your name..." name="name">
+                <input type="email" placeholder="Your email..." name="email">
+                <input type="phone" placeholder="Your phone..." name="phone">
+                <textarea placeholder="Your message..." name="message"></textarea>
+<!--                {{ form.name }} {{ form.email }} {{ form.phone }} {{ form.message }}-->
+                <button type="submit" name="Contact">SEND</button>
             </form>
         </div>
         <div class="contact__data-form">
@@ -126,9 +126,10 @@
     <section class="get-iphone">
         <p class="get-iphone__top-p">NewProvidence</p>
         <h2>Get it to your smartphone</h2>
-        <form action="#">
-            <input type="email" placeholder="Input your email...">
-            <button type="submit">
+        <form action="#" method="post">
+            {% csrf_token %}
+            <input type="email" placeholder="Input your email...", name="email">
+            <button type="submit" name = "EmailInvite">
                 <span>Send Invite</span>
                 <img src="../../static/main/img/arrow_icon.svg" alt="Arrow_icon">
             </button>
