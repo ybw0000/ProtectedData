@@ -233,6 +233,7 @@
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Log In</a> or <a href="{% url 'signup' %}">Sign up</a>
+    <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
 {% endif %}
 
 </body>
