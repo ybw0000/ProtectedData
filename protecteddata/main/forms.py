@@ -1,28 +1,18 @@
 from django import forms
-from .models import Contact
+from .models import Contact, Invite
 
 
 class ContactForm(forms.ModelForm):
+    name = forms.TextInput
+    email = forms.EmailInput
+    phone = forms.TextInput
+    message = forms.Textarea
     class Meta:
         model = Contact
         fields = ['name', 'email', 'phone', 'message']
 
-        widgets = {
-            "name": forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Name'
-            }),
-            "email": forms.EmailInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Email'
-            }),
-            "phone": forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Phone number'
-            }),
-            "message": forms.Textarea(attrs={
-                'class': 'form-control',
-                'placeholder': 'Your message'
-            }),
-        }
-
+class InviteForm(forms.ModelForm):
+    email = forms.EmailInput
+    class Meta:
+        model = Invite
+        fields = ['email']
