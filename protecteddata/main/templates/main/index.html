@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../../static/main/css/style.css">
     <link rel="shortcut icon" type="image/icon" href="../../static/main/img/favicon.ico">
     <link rel="stylesheet" href="../../static/main/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="../../static/main/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="../../static/main/css/animate.min.css">
@@ -62,7 +63,7 @@
                 <input type="email" placeholder="Your email..." name="email">
                 <input type="phone" placeholder="Your phone..." name="phone">
                 <textarea placeholder="Your message..." name="message"></textarea>
-<!--                {{ form.name }} {{ form.email }} {{ form.phone }} {{ form.message }}-->
+                <!--                {{ form.name }} {{ form.email }} {{ form.phone }} {{ form.message }}-->
                 <button type="submit" name="Contact">SEND</button>
             </form>
         </div>
@@ -128,8 +129,8 @@
         <h2>Get it to your smartphone</h2>
         <form action="#" method="post">
             {% csrf_token %}
-            <input type="email" placeholder="Input your email...", name="email">
-            <button type="submit" name = "EmailInvite">
+            <input type="email" placeholder="Input your email..." , name="email">
+            <button type="submit" name="EmailInvite">
                 <span>Send Invite</span>
                 <img src="../../static/main/img/arrow_icon.svg" alt="Arrow_icon">
             </button>
@@ -169,23 +170,23 @@
 
                                 <div class="item active">
                                     <div class="testimonial">
-                                        <h3>New Providence is the great UI kit</h3>
-                                        <p>“Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door.”</p>
+                                        <h3>New project participant</h3>
+                                        <p>“When you do something noble and beautiful and nobody noticed, do not be sad. For the sun every morning is a beautiful spectacle and yet most of the audience still sleeps.”</p>
                                         <div class="star-rating">
                                             <i class="fa fa-star gold-star"></i>
                                             <i class="fa fa-star gold-star"></i>
                                             <i class="fa fa-star gold-star"></i>
                                             <i class="fa fa-star gold-star"></i>
-                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star gold-star"></i>
                                         </div>
-                                        <p class="customer-name">Cameron Downman</p>
+                                        <p class="customer-name">Yulia Kharuk</p>
                                     </div>
                                 </div>
 
                                 <div class="item">
                                     <div class="testimonial">
-                                        <h3>New Providence is the great UI kit</h3>
-                                        <p>“Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door.”</p>
+                                        <h3>New project participant</h3>
+                                        <p>“The biggest risk is not taking any risk. In a world that's changing really quickly, the only strategy that is guaranteed to fail is not taking risks.”</p>
                                         <div class="star-rating">
                                             <i class="fa fa-star gold-star"></i>
                                             <i class="fa fa-star gold-star"></i>
@@ -193,22 +194,22 @@
                                             <i class="fa fa-star gold-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                        <p class="customer-name">Cameron Downman</p>
+                                        <p class="customer-name">Ostap Semenchuk</p>
                                     </div>
                                 </div>
 
                                 <div class="item">
                                     <div class="testimonial">
-                                        <h3>New Providence is the great UI kit</h3>
-                                        <p>“Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door.”</p>
+                                        <h3>New project participant</h3>
+                                        <p>“As long as man continues to be the ruthless destroyer of lower living beings he will never know health or peace. For as long as men massacre animals, they will kill each other.”</p>
                                         <div class="star-rating">
                                             <i class="fa fa-star gold-star"></i>
                                             <i class="fa fa-star gold-star"></i>
                                             <i class="fa fa-star gold-star"></i>
-                                            <i class="fa fa-star gold-star"></i>
+                                            <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                        <p class="customer-name">Cameron Downman</p>
+                                        <p class="customer-name">Maria Manulyak</p>
                                     </div>
                                 </div>
                             </div>
@@ -222,21 +223,60 @@
             </div>
         </div>
     </section>
+    <section class="choose">
+        <div class="choose__text">
+            <h2>Choose your perfect plan</h2>
+            <span class="choose__text_are">You are</span>
+            <div class="choose__text_buttons">
+                <button>Individual</button>
+                <button>Company</button>
+            </div>
+            <p>Thus much I thought proper to tell you in relation to yourself, and to the trust I reposed in you.</p>
+            <span class="choose__text_talk">Have a bigger team? <a href="#"> Let‘s talk</a></p>
+        </div>
+        <div class="choose__first-cart">
+            <h2>Starter</h2>
+            <a class="choose__first-cart_mini" href="#">Free</a>
+            <p>Build your schedule every day</p>
+            <ul>
+                <li><i class="fas fa-check"></i> Unlimeted events</li>
+                <li><i class="fas fa-check"></i> Connect Dropbox & Evernote</li>
+            </ul>
+            <a class="choose__first-cart_big" href="#">Get started</a>
+        </div>
+        <div class="choose__second-cart">
+            <h2>Pro</h2>
+            <a class="choose__second-cart_mini" href="#">$4.99</a>
+            <p>Make your life better</p>
+            <ul>
+                <li><i class="fas fa-check"></i> Unlimeted events</li>
+                <li><i class="fas fa-check"></i> Connect Dropbox & Evernote</li>
+                <li><i class="fas fa-check"></i> Personal Assistant</li>
+            </ul>
+            <a class="choose__second-cart_big" href="#">Make me a Pro</a>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
 
     <script src="../../static/main/js/jquery-2.1.4.min.js"></script>
     <script src="../../static/main/js/bootstrap.min.js"></script>
-<!--    <script src="../../static/main/js/main.js"></script>-->
-
-    {% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">Log Out</a></p>
-  <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a> or <a href="{% url 'signup' %}">Sign up</a>
+    <!--    <script src="../../static/main/js/main.js"></script>-->
+     {% if user.is_authenticated %} Hi {{ user.username }}!
+    <p><a href="{% url 'logout' %}">Log Out</a></p>
+    <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
+    {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">Log In</a> or <a href="{% url 'signup' %}">Sign up</a>
     <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
-{% endif %}
-
+    {% endif %}
 </body>
 
 </html>
