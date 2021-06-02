@@ -151,7 +151,6 @@
             <div class="row">
                 <div id="testimonials-slider">
                     <div class="col-md-6 col-md-offset-3 text-center">
-
                         <div class="carousel slide" data-ride="carousel" id="quote-carousel">
                             <div class="carousel-inner text-center">
                                 <ol class="carousel-indicators">
@@ -166,8 +165,6 @@
                                         <img class="img-responsive" src="../../static/main/img/user3.jpg" alt="">
                                     </li>
                                 </ol>
-
-
                                 <div class="item active">
                                     <div class="testimonial">
                                         <h3>New project participant</h3>
@@ -228,10 +225,10 @@
             <h2>Choose your perfect plan</h2>
             <span class="choose__text_are">You are</span>
             <div class="choose__text_buttons">
-                <button>Individual</button>
-                <button>Company</button>
+                <button type="submit" id="individual" onclick="pressIndividualButton()">Individual</button>
+                <button type="submit" id="company" onclick="pressCompanyButton()">Company</button>
             </div>
-            <p>Thus much I thought proper to tell you in relation to yourself, and to the trust I reposed in you.</p>
+            <p id="container">To see specific information about the collaboration plan click the button above.</p>
             <span class="choose__text_talk">Have a bigger team? <a href="#"> Let‘s talk</a></p>
         </div>
         <div class="choose__first-cart">
@@ -256,11 +253,18 @@
             <a class="choose__second-cart_big" href="#">Make me a Pro</a>
         </div>
     </section>
-
-
-
-
-
+    <section class="newsletter">
+        <h2>Subscribe our newsletters</h2>
+        <form action="#" method="post">
+            {% csrf_token %}
+            <input type="email" placeholder="Your e-mail..." , name="email">
+            <button type="submit" name="EmailInvite">
+                <span>Send Invite</span>
+            <img src="../../static/main/img/arrow_icon.svg" alt="Arrow_icon">
+            </button>
+            </form>
+            <p>We promise to never spam you.</p>
+    </section>
 
 
 
@@ -268,8 +272,8 @@
 
     <script src="../../static/main/js/jquery-2.1.4.min.js"></script>
     <script src="../../static/main/js/bootstrap.min.js"></script>
-    <!--    <script src="../../static/main/js/main.js"></script>-->
-     {% if user.is_authenticated %} Hi {{ user.username }}!
+    <script src="../../static/main/js/main.js"></script>
+    {% if user.is_authenticated %} Hi {{ user.username }}!
     <p><a href="{% url 'logout' %}">Log Out</a></p>
     <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
     {% else %}
