@@ -23,11 +23,18 @@
 </head>
 
 <body>
+
+    <!--  1 BLOCK - MENU  -->
+
     <section class="menu">
         <div class="menu__left">
-            <a href="#">Tour</a>
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
+            {% if user.is_authenticated %} Hi {{ user.username }}!
+            <a href="{% url 'logout' %}">Log Out</a>
+            <a href="{% url 'password_reset' %}">Reset Password</a> {% else %}
+            <span>You are not logged in</span>
+            <a href="{% url 'login' %}">Log In</a>
+            <a href="{% url 'signup' %}">Sign up</a>
+            <a href="{% url 'password_reset' %}">Forgot password?</a> {% endif %}
         </div>
         <div class="menu__center">
             <a href="#"><span class="menu__center_logo">NEW</span>PROVIDENCE</a>
@@ -51,6 +58,8 @@
             </button>
         </a>
     </section>
+
+    <!--  2 BLOCK - CONTACT  -->
     <section class="contact">
         <div class="contact__text">
             <h2>Contact</h2>
@@ -76,6 +85,9 @@
             <p>+380 66 407 40 12</p>
         </div>
     </section>
+
+    <!--  3 BLOCK - DESCRIPTION  -->
+
     <section class="description">
         <div class="description__left">
             <img src="../../static/main/img/lock_icon.svg" alt="Lock_Icon">
@@ -91,6 +103,9 @@
         </div>
     </section>
     <img class="line" src="../../static/main/img/line_height.svg" alt="Line_after_desription">
+
+    <!--  4 BLOCK - IPHONE  -->
+
     <section class="iphone">
         <img src="../../static/main/img/iPhone_6.png" alt="Iphone-6">
         <div class="iphone__text">
@@ -99,6 +114,9 @@
             <p>We thought - Mr. Copperfield thought - it was quite a large rookery; but the nests were very old ones, and the birds have deserted them a long while.</p>
         </div>
     </section>
+
+    <!--  5 BLOCK - MAP  -->
+
     <section class="map">
         <div class="map__text">
             <h2>We are almost <br> everywhere</h2>
@@ -112,6 +130,9 @@
         </div>
         <img src="../../static/main/img/world_map.png" alt="World_map">
     </section>
+
+    <!--  6 BLOCK - SCREENS  -->
+
     <section class="screens">
         <h2>Beautiful Interface</h2>
         <hr>
@@ -124,12 +145,15 @@
             <img src="../../static/main/img/screen_5.png" alt="Screen_item_5">
         </div>
     </section>
+
+    <!--  7 BLOCK - GET-IPHONE  -->
+
     <section class="get-iphone">
         <p class="get-iphone__top-p">NewProvidence</p>
         <h2>Get it to your smartphone</h2>
         <form action="#" method="post">
             {% csrf_token %}
-            <input type="email" placeholder="Input your email..." , name="email">
+            <input type="email" placeholder="Input your email..." name="email">
             <button type="submit" name="EmailInvite">
                 <span>Send Invite</span>
                 <img src="../../static/main/img/arrow_icon.svg" alt="Arrow_icon">
@@ -146,6 +170,9 @@
             </button>
         </a>
     </section>
+
+    <!--  8 BLOCK - CUSTOMERS  -->
+
     <section id="customers">
         <div class="container">
             <div class="row">
@@ -220,6 +247,9 @@
             </div>
         </div>
     </section>
+
+    <!--  9 BLOCK - CHOOSE  -->
+
     <section class="choose">
         <div class="choose__text">
             <h2>Choose your perfect plan</h2>
@@ -229,7 +259,7 @@
                 <button type="submit" id="company" onclick="pressCompanyButton()">Company</button>
             </div>
             <p id="container">To see specific information about the collaboration plan click the button above.</p>
-            <span class="choose__text_talk">Have a bigger team? <a href="#"> Let‘s talk</a></p>
+            <span class="choose__text_talk">Have a bigger team? <a href="#"> Let‘s talk</a></span>
         </div>
         <div class="choose__first-cart">
             <h2>Starter</h2>
@@ -253,34 +283,74 @@
             <a class="choose__second-cart_big" href="#">Make me a Pro</a>
         </div>
     </section>
+
+    <!--  10 BLOCK - NEWSLETTER  -->
+
     <section class="newsletter">
         <h2>Subscribe our newsletters</h2>
         <form action="#" method="post">
             {% csrf_token %}
-            <input type="email" placeholder="Your e-mail..." , name="email">
+            <input type="email" placeholder="Your e-mail..." name="email">
             <button type="submit" name="EmailInvite">
-                <span>Send Invite</span>
-            <img src="../../static/main/img/arrow_icon.svg" alt="Arrow_icon">
+                <span>Subscribe</span>
             </button>
-            </form>
-            <p>We promise to never spam you.</p>
+        </form>
+        <p>We promise to never spam you.</p>
     </section>
+    <img class="line" src="../../static/main/img/line_height.svg" alt="Line_after_desription">
+
+    <!-- 11 BLOCK - FOOTER -->
+
+    <footer class="footer">
+        <div class="footer__left">
+            <span class="footer__left_title"><span>NEW</span>PROVIDENCE</span>
+            <p>It was some time before he obtained any answer, and the reply, when made, was unpropitious.</p>
+            <a href="#"><img src="../../static/main/img/download.png" alt=""></a>
+            <div class="footer__left_icons">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-tumblr"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer__right">
+            <div class="footer__right_first">
+                <span>Learn More</span>
+                <a href="#" target="_blank">How it works?</a>
+                <a href="#" target="_blank">Meeting tools</a>
+                <a href="#" target="_blank">Live striming</a>
+                <a href="#" target="_blank">Contat method</a>
+            </div>
+            <div class="footer__right_second">
+                <span>About Us</span>
+                <a href="#" target="_blank">About us </a>
+                <a href="#" target="_blank">Features</a>
+                <a href="#" target="_blank">Privacy police</a>
+                <a href="#" target="_blank">Terms & Conditions</a>
+            </div>
+            <div class="footer__right_third">
+                <span>Support</span>
+                <a href="#" target="_blank">F.A.Q.</a>
+                <a href="#" target="_blank">Contact us</a>
+                <a href="#" target="_blank">Live chat</a>
+                <a href="#" target="_blank">Phone call</a>
+            </div>
+        </div>
+    </footer>
 
 
 
 
-
+    <!--  IMPORTS JavaScript  -->
     <script src="../../static/main/js/jquery-2.1.4.min.js"></script>
     <script src="../../static/main/js/bootstrap.min.js"></script>
     <script src="../../static/main/js/main.js"></script>
-    {% if user.is_authenticated %} Hi {{ user.username }}!
-    <p><a href="{% url 'logout' %}">Log Out</a></p>
-    <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
-    {% else %}
-    <p>You are not logged in</p>
-    <a href="{% url 'login' %}">Log In</a> or <a href="{% url 'signup' %}">Sign up</a>
-    <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
-    {% endif %}
+
+    <!--  ADD LOGIN FORM  -->
+
+
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 "use strict";
 
-// Add choose perfect plan function 
+// Add onclick for revert value button in 9 BLOCK - CHOOSE
 const getDataInParagraph = document.querySelector("#container");
 
 function pressIndividualButton() {
