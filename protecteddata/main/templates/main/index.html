@@ -31,10 +31,8 @@
             {% if user.is_authenticated %} Hi {{ user.username }}!
             <a href="{% url 'logout' %}">Log Out</a>
             <a href="{% url 'password_reset' %}">Reset Password</a> {% else %}
-            <span>You are not logged in</span>
             <a href="{% url 'login' %}">Log In</a>
-            <a href="{% url 'signup' %}">Sign up</a>
-            <a href="{% url 'password_reset' %}">Forgot password?</a> {% endif %}
+            <a id="signup_button" href="{% url 'signup' %}">Sign up</a> {% endif %}
         </div>
         <div class="menu__center">
             <a href="#"><span class="menu__center_logo">NEW</span>PROVIDENCE</a>
