@@ -1,5 +1,5 @@
 from django import forms
-from .models import Contact, Invite
+from .models import Contact, Invite, Newsletter
 
 
 class ContactForm(forms.ModelForm):
@@ -15,4 +15,10 @@ class InviteForm(forms.ModelForm):
     email = forms.EmailInput
     class Meta:
         model = Invite
+        fields = ['email']
+
+class NewslettersForm(forms.ModelForm):
+    email = forms.EmailInput
+    class Meta:
+        model = Newsletter
         fields = ['email']

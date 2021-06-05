@@ -22,3 +22,13 @@ class Invite(models.Model):
     class Meta:
         verbose_name = 'Invite'
         verbose_name_plural = 'Invites'
+
+class Newsletter(models.Model):
+    email = models.EmailField('Email', max_length=50)
+
+    def __str__(self):
+        return self.email
+
+    class Meta:
+        verbose_name = 'Newsletter'
+        verbose_name_plural = 'Newsletters'
