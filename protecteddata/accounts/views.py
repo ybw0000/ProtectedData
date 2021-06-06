@@ -1,23 +1,10 @@
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect, render
-from django.urls import reverse_lazy
-from django.views import generic
+from .forms import SignUpForm
 from django import forms
-from django.contrib.auth.models import User
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib import messages
 
-
-class SignUpForm(UserCreationForm):
-    email = forms.EmailField(max_length=32, help_text='Enter email')
-
-    class Meta:
-        model = User
-        fields = ('username', 'email', 'password1', 'password2')
-
-# class SignUpView(generic.CreateView):
-#     form_class = UserCreationForm
-#     success_url = reverse_lazy('login')
-#     template_name = 'registration/signup.html'
 
 def SignUpView(request):
     if request.method == 'POST':
@@ -33,3 +20,18 @@ def SignUpView(request):
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', context={'form':form})
+
+def LoginView(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request.POST)
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username = username, password = password)
+        if user is not None:
+            login(request, user)
+            return redirect('/')
+        else:
+            messages.error(request, 'Login or password is not correct')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'registration/login.html', context={'form': form})
