@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1','localhost','fbd86f7c56fa.ngrok.io']
 INSTALLED_APPS = [
     'main',
     'accounts',
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
