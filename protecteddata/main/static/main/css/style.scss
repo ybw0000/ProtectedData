@@ -23,7 +23,7 @@
         font-family: 'Lato', sans-serif;
         padding: 4% 10% 40% 10%;
         &__left {
-            width: 18%;
+            width: 20%;
             display: flex;
             /* & a {
             width: 100%;
@@ -40,7 +40,7 @@
             
         } */
             & a {
-                width: 180px;
+                width: 200px;
                 height: 32px;
                 background-color: #000000;
                 color: #ffffff;
@@ -50,6 +50,7 @@
                 align-items: center;
                 border: none;
                 margin-left: 5%;
+
                 &:hover {
                     background-color: #ffffff;
                     color: #000000;
@@ -66,6 +67,7 @@
                     color: #ffffff;
                 }
             }
+
             & span {
                 font-size: 20px;
                 color: #9e1515;
