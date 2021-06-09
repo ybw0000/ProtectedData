@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset
+From: ProtectedData@gmail.com
+To: asdqwe.123qweasd@yandex.ua
+Date: Wed, 09 Jun 2021 11:56:42 -0000
+Message-ID: <162323980239.3436.3406720410594321472@DESKTOP-2FTPEVM>
+
+
+Hello,
+
+We received a request to reset the password for your account for this email address. To initiate the password reset process for your account, click the link below.
+
+http://127.0.0.1:8000/accounts/reset/Nw/anzdii-9600d95ac05e3255f448d127191a40c3/
+
+This link can only be used once. If you need to reset your password again, please visit http://127.0.0.1:8000 and request another reset.
+
+If you did not make this request, you can simply ignore this email.
+
+Sincerely,
+Protected Data
+
+
+-------------------------------------------------------------------------------

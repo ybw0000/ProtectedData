@@ -78,23 +78,23 @@ WSGI_APPLICATION = 'protecteddata.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#DATABASES = {
- #  'default': {
-  #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-  #     'NAME': 'ProtectedData',
-  #     'USER': 'admin',
-  #     'PASSWORD' : '123qweasdzxc',
-  #     'HOST' : 'localhost',
-  #     'PORT': '5432'
-  # }
-#}
-
 DATABASES = {
-     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-     }
- }
+  'default': {
+      'ENGINE': 'django.db.backends.postgresql_psycopg2',
+      'NAME': 'ProtectedData',
+      'USER': 'admin',
+      'PASSWORD' : '123qweasdzxc',
+      'HOST' : 'localhost',
+      'PORT': '5432'
+  }
+}
+
+# DATABASES = {
+#      'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#      }
+#  }
 
 
 # Password validation
@@ -150,5 +150,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'faquedust@gmail.com'
+EMAIL_HOST_PASSWORD = '123QWEasdzxc'
 EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
