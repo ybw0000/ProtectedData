@@ -30,7 +30,7 @@
         <div class="menu__left">
             {% if user.is_authenticated %} Hi {{ user.username }}!
             <a href="{% url 'logout' %}">Log Out</a>
-            <a href="{% url 'password_reset' %}">Reset Password</a> {% else %}
+            <a id="signup_button" href="{% url 'password_reset' %}">Reset Password</a> {% else %}
             <a href="{% url 'login' %}">Log In</a>
             <a id="signup_button" href="{% url 'signup' %}">Sign up</a> {% endif %}
         </div>
