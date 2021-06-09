@@ -8,10 +8,10 @@ from django.shortcuts import redirect, render
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
-
 from .forms import SignUpForm
 from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm
 from django.contrib import messages
+from protecteddata.settings import EMAIL_HOST_USER
 
 
 def SignUpView(request):
@@ -56,7 +56,7 @@ def PassResetView(request):
                     email_template_name = 'registration/pass_reset_email.txt'
                     c = {
                         'email': user.email,
-                        'domain': 'localhost',
+                        'domain': '127.0.0.1:8000',
                         'site_name': 'Protected Data',
                         'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                         'user': user,
@@ -65,10 +65,10 @@ def PassResetView(request):
                     }
                     email = render_to_string(email_template_name, c)
                     try:
-                        send_mail(subject, email, 'ProtectedData@gmail.com', [user.email], fail_silently = False)
+                        send_mail(subject, email, EMAIL_HOST_USER, [user.email], fail_silently = False)
                     except BadHeaderError:
                         return HttpResponse('Invalid header found.')
-                    return render('password_reset_done.html')
+                    return render(request, 'registration/password_reset_done.html')
     pass_reset_form = PasswordResetForm()
     return render(request, 'registration/password_reset_form.html', context={'pass_reset_form': pass_reset_form})
 
