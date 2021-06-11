@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-0t34!d+i=igh#%*haj#o0rn^i@ec9u9iigfclc9ehca3d*+u&1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','fbd86f7c56fa.ngrok.io']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -78,17 +78,31 @@ WSGI_APPLICATION = 'protecteddata.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# #local db for back
+# DATABASES = {
+#   'default': {
+#       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#       'NAME': 'ProtectedData',
+#       'USER': 'admin',
+#       'PASSWORD' : '123qweasdzxc',
+#       'HOST' : 'localhost',
+#       'PORT': '5432'
+#   }
+# }
+
+# db for docker
 DATABASES = {
   'default': {
-      'ENGINE': 'django.db.backends.postgresql_psycopg2',
+      'ENGINE': 'django.db.backends.postgresql',
       'NAME': 'ProtectedData',
       'USER': 'admin',
       'PASSWORD' : '123qweasdzxc',
-      'HOST' : 'localhost',
+      'HOST' : 'db',
       'PORT': '5432'
   }
 }
 
+#db for front
 # DATABASES = {
 #      'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
