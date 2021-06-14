@@ -30,7 +30,7 @@ html {
 }
 
 .menu__left {
-  width: 18%;
+  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,7 +51,7 @@ html {
 }
 
 .menu__left a {
-  width: 180px;
+  width: 200px;
   height: 32px;
   background-color: #000000;
   color: #ffffff;

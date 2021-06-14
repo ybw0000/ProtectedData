@@ -91,24 +91,24 @@ WSGI_APPLICATION = 'protecteddata.wsgi.application'
 # }
 
 # db for docker
-DATABASES = {
-  'default': {
-      'ENGINE': 'django.db.backends.postgresql',
-      'NAME': 'ProtectedData',
-      'USER': 'admin',
-      'PASSWORD' : '123qweasdzxc',
-      'HOST' : 'db',
-      'PORT': '5432'
-  }
-}
+# DATABASES = {
+#   'default': {
+#       'ENGINE': 'django.db.backends.postgresql',
+#       'NAME': 'ProtectedData',
+#       'USER': 'admin',
+#       'PASSWORD' : '123qweasdzxc',
+#       'HOST' : 'db',
+#       'PORT': '5432'
+#   }
+# }
 
 #db for front
-# DATABASES = {
-#      'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#      }
-#  }
+DATABASES = {
+     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+     }
+ }
 
 
 # Password validation
@@ -169,6 +169,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'faquedust@gmail.com'
-EMAIL_HOST_PASSWORD = '123QWEasdzxc'
+EMAIL_HOST_USER = 'email'
+EMAIL_HOST_PASSWORD = 'password'
 EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
